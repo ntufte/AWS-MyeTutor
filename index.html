@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" data-ng-app="application" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" data-ng-app="application" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" data-ng-app="application" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" data-ng-app="application" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>My eTutor</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="vendor/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="vendor/html5-boilerplate/dist/css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600italic,400italic,600,700,700italic' rel='stylesheet' type='text/css'>
+    <link href="css/login.css" rel="stylesheet">
+    <script src="vendor/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div id="main-wrapper">
+        <div id="bgtop"></div>
+        <div id="bgbottom"></div>
+
+        <div id="loginarea">
+            <div class="botimage">
+                <img title="Welcome" src="images/doorlogin.png">
+            </div>
+            <div id="logo">
+                <img src="images/logo72.png" title="Myetutor">
+            </div>
+            <div class="login">
+                <h3>User Login</h3>
+
+                <form id="tutorlogin" data-ng-submit="submit()" data-ng-controller="IndexController">
+                    <!-- // @TODO remove the type field before live -->
+                    <!--input type="text" name="type" data-ng-model="usertype" placeholder="Type" -->
+                    <input type="text" name="username" data-ng-model="username" placeholder="Email" >
+                    <input type="password" name="password" data-ng-model="password" placeholder="Password">
+                    <input type="submit" name="login" value="Login">
+                </form>
+
+                <a class="signup" href="#">Sign up</a>
+               
+            </div>
+        </div>
+
+        <div id="choosetype">
+            <div class="typecontent">
+                <ul>
+                    <li>
+                        <a href="#"><img src="images/children.png"></a>
+                        <a class="type" id="typeStudent" href="/register.html#/student">Student</a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/parents.png"></a>
+                        <a class="type" id="typeParent" href="/register.html#/student">Parent</a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/tutors.png"></a>
+                        <a class="type" id="typeTutor" href="/register.html#/tutor">Tutor</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div> <!-- end of wrapper -->
+
+    <!-- In production use:
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+    -->
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular-route/angular-route.js"></script>
+    <script src="vendor/ngstorage/ngStorage.js"></script>
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+
+    <script src="ng/application/module.js"></script>
+    <script src="ng/application/controller/index.js"></script>
+    <script src="ng/application/services/http.js"></script>
+    <script src="ng/application/services/auth.js"></script>
+    <script src="ng/application/services/debug.js"></script>
+    <script src="ng/application/entity/user.js"></script>
+</body>
+</html>

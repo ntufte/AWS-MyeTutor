@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" data-ng-app="dashboard" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" data-ng-app="dashboard" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" data-ng-app="dashboard" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" data-ng-app="dashboard" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>My eTutor</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="vendor/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="vendor/html5-boilerplate/dist/css/main.css">
+
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/fullcalendar/dist/fullcalendar.min.css">
+    <link rel="stylesheet" href="vendor/fullcalendar/dist/fullcalendar.print.css" media="print">
+    <link rel="stylesheet" href="vendor/DataTables/media/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600italic,400italic,600,700,700italic' rel='stylesheet' type='text/css'>
+
+    <link href="css/dashstyles.css" rel="stylesheet">
+    <link href="css/isotope.css" rel="stylesheet">
+
+    <script src="vendor/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div id="main-wrapper" ng-class="{'wrapperparent': user.isParent(), 'wrapperstudent': user.isStudent(), 'wrappertutor': user.isTutor()} ">
+
+        <div id="topside" data-navbar="dashboard">
+        </div><!-- End of topside !-->
+
+        <div id="main">
+
+            <div id="paper">
+                <div data-ng-view data-m-custom-scrollbar></div>
+            </div>
+                    
+            <div id="menu">
+                <div id="upcoming" data-ng-if="user.isParent() || user.isRegistered()" data-widget-upcoming-lesson class="box"></div>
+                <div id="profileSetup" data-ng-if="!user.isParent() && !user.isRegistered()" data-widget-profile-setup class="box"></div>
+                <div data-ng-if="!user.isParent()" id="classes" data-widget-todays-classes class="box"></div>
+                <div id="latest" data-widget-latest-news class="box"></div>
+            </div>
+
+        </div><!-- End of main !-->
+    </div> <!-- end of wrapper -->
+
+    <!-- In production use:
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+    -->
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular-route/angular-route.js"></script>
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendor/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+    <script src="vendor/moment/moment.js"></script>
+    <script src="vendor/ngstorage/ngStorage.js"></script>
+    <script src="vendor/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script src="vendor/DataTables/media/js/jquery.dataTables.min.js"></script>
+    <script src="vendor/circles/circles.js"></script>
+    <script src="vendor/chartjs/dist/Chart.js"></script>
+    <script src="vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <script src="js/jquery.isotope.js"></script>
+
+    <script src="ng/application/module.js"></script>
+    <script src="ng/application/services/http.js"></script>
+    <script src="ng/application/services/classes.js"></script>
+    <script src="ng/application/services/auth.js"></script>
+    <script src="ng/application/services/debug.js"></script>
+    <script src="ng/application/services/news.js"></script>
+    <script src="ng/application/directives/navbar.js"></script>
+    <script src="ng/application/directives/popover.js"></script>
+    <script src="ng/application/directives/route-active.js"></script>
+    <script src="ng/application/directives/file-model.js"></script>
+    <script src="ng/application/directives/m-custom-scrollbar.js"></script>
+    <script src="ng/application/directives/circle.js"></script>
+    <script src="ng/application/entity/user.js"></script>
+    <script src="ng/application/entity/class.js"></script>
+    <script src="ng/application/entity/lesson.js"></script>
+    <script src="ng/application/entity/pretest.js"></script>
+
+    <script src="ng/dashboard/module.js"></script>
+    <script src="ng/dashboard/controller/calendar.js"></script>
+    <script src="ng/dashboard/controller/reports.js"></script>
+    <script src="ng/dashboard/controller/resources.js"></script>
+    <script src="ng/dashboard/controller/profile.js"></script>
+    <script src="ng/dashboard/directives/widget-upcoming-lesson.js"></script>
+    <script src="ng/dashboard/directives/widget-profile-setup.js"></script>
+    <script src="ng/dashboard/directives/widget-latest-news.js"></script>
+    <script src="ng/dashboard/directives/widget-todays-classes.js"></script>
+    <script src="ng/dashboard/directives/widget-user-profile.js"></script>
+    <script src="ng/dashboard/directives/widget-view-students.js"></script>
+    <script src="ng/dashboard/directives/widget-pretest.js"></script>
+</body>
+</html>

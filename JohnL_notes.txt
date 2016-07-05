@@ -1,0 +1,2 @@
+- dayly calendar: filter out more classes in registered hours
+- dayly calendar: specific hour choose tutors sevice/ two tabs / two arrays with ordered tutors

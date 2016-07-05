@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" data-ng-app="lesson" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" data-ng-app="lesson" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" data-ng-app="lesson" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" data-ng-app="lesson" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>My eTutor</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="vendor/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="vendor/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+
+    <link href="//s3.amazonaws.com/media.muchosmedia.com/scribblar/styles/style.css" rel="stylesheet" type="text/css">
+
+    <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600italic,400italic,600,700,700italic' rel='stylesheet' type='text/css'>
+
+    <link href="css/tutorlesson.css" rel="stylesheet">
+
+    <script src="vendor/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div id="main-wrapper" data-ng-view></div>
+
+    <!-- In production use:
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+    -->
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular-route/angular-route.js"></script>
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendor/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="//s3.amazonaws.com/media.muchosmedia.com/scribblar/scripts/includes.js"></script>
+
+    <script src="vendor/moment/moment.js"></script>
+    <script src="vendor/ngstorage/ngStorage.js"></script>
+    <script src="vendor/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="vendor/circles/circles.js"></script>
+
+    <script src="ng/application/module.js"></script>
+    <script src="ng/application/services/http.js"></script>
+    <script src="ng/application/services/auth.js"></script>
+    <script src="ng/application/services/debug.js"></script>
+    <script src="ng/application/directives/circle.js"></script>
+    <script src="ng/application/entity/user.js"></script>
+    <script src="ng/application/entity/lesson.js"></script>
+
+    <script src="ng/lesson/module.js"></script>
+    <script src="ng/lesson/controller/student.js"></script>
+    <script src="ng/lesson/controller/tutor.js"></script>
+    <script src="ng/lesson/directives/widget-student.js"></script>
+    <script src="ng/lesson/directives/widget-tutor.js"></script>
+    <script src="ng/lesson/directives/widget-chat.js"></script>
+    <script src="ng/lesson/directives/widget-lesson.js"></script>
+    <script src="ng/lesson/directives/widget-whiteboard.js"></script>
+    <script src="ng/lesson/directives/widget-student-details.js"></script>
+    <script src="ng/lesson/directives/widget-tutor-toolbar.js"></script>
+
+    <script src="ng/dashboard/module.js"></script>
+    <script src="ng/dashboard/directives/widget-user-profile.js"></script>
+
+
+
+</body>
+</html>
